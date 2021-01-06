@@ -9,7 +9,7 @@ function defaulted(obj, defaultObj) {
         returnObj = [...obj, ...defaultObj];
     } else if (typeof obj === "object") { /** if objects are not array and they are objects, ( {etc..} , {etc..}) look up recursively */
         for (const [key, value] of Object.entries(defaultObj)) {
-            returnObj[key] = this.normalize(obj[key], value);
+            returnObj[key] = defaulted(obj[key], value);
         }
     } else { /** value changed, no-need to default value */
         returnObj = obj;
