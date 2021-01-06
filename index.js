@@ -1,4 +1,4 @@
-export function defaulted(obj, defaultObj) {
+function defaulted(obj, defaultObj) {
     /** initializing return object */
     let returnObj = {};
     if (typeof obj === "undefined") { /** if source object is undefined, load defaults */
@@ -15,4 +15,8 @@ export function defaulted(obj, defaultObj) {
         returnObj = obj;
     }
     return returnObj;
+}
+
+export default {
+    defaulted: defaulted
 }
