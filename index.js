@@ -18,5 +18,5 @@ function defaulted(obj, defaultObj) {
 }
 
 export default {
-    defaulted: defaulted
+    defaulted
 }
